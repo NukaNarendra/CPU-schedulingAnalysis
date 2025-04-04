@@ -12,19 +12,19 @@ This project analyzes **CPU scheduling algorithms and system errors** by gatheri
 
 ##  Project Structure
 
-### **1. `main.py` (Data Collection & Preprocessing)**
+### **1. `Collecting Data Directory main.py` (Data Collection & Preprocessing)**
 - Uses `psutil` to **collect system metrics**.
 - Stores data in **MySQL** (`cpu_scheduling` database).
 - Implements **CPU scheduling algorithms** (FCFS, SJF, RR, Priority Scheduling).
 - Logs **system events and errors**.
 
-### **2. `main-2.py` (Machine Learning Model Training)**
+### **2. `Training and Evaluating the Data Directory main.py` (Machine Learning Model Training)**
 - Fetches data from MySQL (`performance` table).
 - Prepares dataset with **CPU utilization, turnaround time, waiting time, response time**.
 - Trains **Random Forest & Gradient Boosting Regressor** models.
 - Stores model evaluation metrics (MSE, R2, MAE) in MySQL (`model_evaluation` table).
 
-### **3. `main-3.py` (Data Visualization Dashboard)**
+### **3. `Visualizing the data Directory main.py` (Data Visualization Dashboard)**
 - Fetches performance metrics from MySQL.
 - Uses **Dash & Plotly** to create an interactive **CPU Scheduling Performance Dashboard**.
 - Includes:
@@ -40,17 +40,17 @@ pip install psutil mysql-connector-python pandas numpy scikit-learn dash plotly 
 ```
 
 ### **Breakdown by File**
-1. **`main.py` (System Monitoring & Data Collection)**
+1. **`Collecting Data Directory main.py` (System Monitoring & Data Collection)**
    ```bash
    pip install psutil mysql-connector-python
    ```
 
-2. **`main-2.py` (Machine Learning Model Training)**
+2. **`Training and Evaluating the Data Directory main.py` (Machine Learning Model Training)**
    ```bash
    pip install pandas numpy scikit-learn mysql-connector-python
    ```
 
-3. **`main-3.py` (Dashboard & Visualization)**
+3. **`Visualizing the data Directory main.py` (Dashboard & Visualization)**
    ```bash
    pip install dash plotly pandas mysql-connector-python
    ```
@@ -79,19 +79,21 @@ python main.py
 - Gathers system metrics and stores them in MySQL.
 - Runs CPU scheduling algorithms and logs performance.
 
-### **2. Train Machine Learning Models (`main-2.py`)**
+### **2. Train Machine Learning Models (`main.py`)**
 ```bash
-python main-2.py
+python main.py
 ```
 - Fetches data from MySQL and trains models.
 - Stores model evaluation metrics.
 
-### **3. Start Dashboard (`main-3.py`)**
+### **3. Start Dashboard (`main.py`)**
 ```bash
-python main-3.py
+python main.py
 ```
 - Launches the **interactive dashboard** on `http://127.0.0.1:8080/`.
 - Select a scheduling algorithm to view insights.
+## Note
+-- **Before running each file check the file locations properly
 
 ##  Expected Deliverables
 ✔ Real-time system monitoring and error logging.  
